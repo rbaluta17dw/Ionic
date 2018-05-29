@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Avengers: Infinity War</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -9,7 +9,7 @@
     <h1 id="title">Infinity War Characters</h1>
     <div id="personajes">
       <div ion-item *ngFor="let personaje of personajes" class="imagenes" (click)="openModal(personaje)">
-        <img src="../../assets/imgs/{{ personaje.nombre }}.jpg">
+        <img src="{{ personaje.imagen }}">
       </div>
     </div>
   </div>

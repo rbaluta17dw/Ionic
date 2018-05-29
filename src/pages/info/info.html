@@ -7,7 +7,7 @@
 <ion-header>
 
 	<ion-navbar>
-		<ion-title>info</ion-title>
+		<ion-title>{{ personaje.nombre }}</ion-title>
 	</ion-navbar>
 
 </ion-header>
@@ -15,9 +15,7 @@
 
 <ion-content padding>
 	<p>{{ personaje.nombre }}</p>
-	<img src="../../assets/imgs/{{ personaje.nombre }}.jpg">
+	<img src="{{ personaje.imagen }}">
 	<p>{{ personaje.descripcion }}</p>
 	<button ion-button (click)="dismiss()">Cerrar</button>
-	
-	
 </ion-content>
