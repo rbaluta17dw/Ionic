@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavParams, ModalController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+	selector: 'page-home',
+	templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+	personajes:any[];
 
-  }
+	constructor(public navParams: NavParams, public modal: ModalController) {
+		this.personajes=["Loki", "Gamora", "Iron-Man", "Thor"];
+	}
+		openModal(personaje){
 
+			let infoPersonaje = this.modal.create('InfoPage', { 'personaje': personaje });
+			
+			infoPersonaje.present();
+		}
 }
