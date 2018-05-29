@@ -14,8 +14,9 @@ import { IonicPage, ViewController, NavParams } from 'ionic-angular';
  	templateUrl: 'info.html',
  })
  export class InfoPage {
- 	
+ 	personaje;
  	constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+ 		this.personaje = this.navParams.get('item');
  	}
 
  	ionViewDidLoad() {

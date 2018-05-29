@@ -8,7 +8,8 @@
   <div class="container">
     <h1 id="title">Infinity War Characters</h1>
     <div id="personajes">
-      <div ion-item *ngFor="let personaje of personajes" class="imagenes" (click)="openModal(thor)"><img src="../../assets/imgs/{{ personaje }}.jpg">
+      <div ion-item *ngFor="let personaje of personajes" class="imagenes" (click)="openModal(personaje)">
+        <img src="../../assets/imgs/{{ personaje.nombre }}.jpg">
       </div>
     </div>
   </div>
