@@ -7,6 +7,7 @@ import { NavParams, ModalController } from 'ionic-angular';
 })
 export class HomePage {
 
+/* Creo el array de personajes y los atributos, en este caso, nombre, descripcion e imagen */
 	personajes:any[];
 	personajeE:any;
 	nombre:string;
@@ -14,7 +15,9 @@ export class HomePage {
 	imagen:any;
 
 	constructor(public navParams: NavParams, public modal: ModalController) {
-		this.personajes=[
+
+/* Aqui creo los personajes en si, dandoles dentro del array los atributos */
+this.personajes=[
 		{
 			nombre:"Loki",
 			descripcion:"Es un pavo que muere al principio",
@@ -42,6 +45,8 @@ export class HomePage {
 		}
 	];
 }
+
+/* Esto abre un modal, que es como una pagina por encima de la actual, y le paso los parametros del pesonaje en el cual has hecho click para que se vea su informacion */
 		openModal(personaje){
 
 			let infoPersonaje = this.modal.create('InfoPage', { item:personaje });
