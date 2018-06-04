@@ -1,11 +1,19 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            About
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+    <label for="nombre">Nombre</label><br>
+    <ion-input [(ngModel)]='nombre' placeholder="nombre personaje"></ion-input>
+    <label for="descripcion">Descripcion</label><br>
+    <ion-input [(ngModel)]='descripcion' placeholder="introduzca descripcion"></ion-input>
+    <label for="imagen">Imagen</label><br>
+    <ion-input [(ngModel)]='imagen' placeholder="introduzca url de la imagen"></ion-input>
+    <button ion-button (click)="insert()">Inserta Personaje</button>
 
 </ion-content>

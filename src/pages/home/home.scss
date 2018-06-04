@@ -28,9 +28,15 @@ page-home {
 	text-align: center;
 }
 
-#personajes{
+#personajesVivos{
 	width: 300px;
 	margin: 0px auto;
+}
+
+#personajesMuertos{
+	width: 300px;
+	margin: 0px auto;
+	opacity: 0.8;
 }
 img{
 	width: 100px;
